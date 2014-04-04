@@ -59,7 +59,7 @@
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[conference]{../sty/IEEEtran}
-
+\usepackage{hyperref}
 \begin{document}
 
 \title{Outline}
@@ -68,16 +68,30 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Name/s per 1st Affiliation (Author)}
-\IEEEauthorblockA{line 1 (of Affiliation): dept. name of organization\\
-line 2: name of organization, acronyms acceptable\\
-line 3: City, Country\\
-line 4: e-mailaddress if desired}
-\and
-\IEEEauthorblockN{Per Olson\\and Nina Garcic\\}
-\IEEEauthorblockA{Student at Lund University\\
+\author{
+\IEEEauthorblockN{Kasper Bratz}
+\IEEEauthorblockA{Department of Computer Science\\
+Faculty of engineering, LTH
 Lund, Sweden\\
-me@e-mail.me}}
+dat12kbr@student.lu.se}\and
+
+\IEEEauthorblockN{Axel Martensson}
+\IEEEauthorblockA{Department of Computer Science\\
+Faculty of engineering, LTH
+Lund, Sweden\\
+dat12ama@student.lu.se}\and
+
+\IEEEauthorblockN{Christine Boghammar}
+\IEEEauthorblockA{Department of Computer Science\\
+Faculty of engineering, LTH
+Lund, Sweden\\
+dat12cbo@student.lu.se}\and
+
+\IEEEauthorblockN{Johan Nilsson}
+\IEEEauthorblockA{Department of Computer Science\\
+Faculty of engineering, LTH
+Lund, Sweden\\
+dat12jn1@student.lu.se}}
 
 
 \maketitle
@@ -93,18 +107,7 @@ Method for the study, results and conclusions must be written.
 \end{abstract}
 
 \section{Introduction}
-The introduction section can be used to introduce the company in general or to
-introduce the purpose and context of this report. This template is a document
-that provides the predefined outline of your group essay from the seminar
-compendium. If you want to change or adjust your outline, you must do so before
-the outline is due (April 11, 2014). The outline shall include a brief
-description of your system in Section~\ref{system}, and the results from the
-seminars in Sections~\ref{quality}, \ref{availability}, and \ref{legal} --- at
-least an itemized form. Further, literature that you base your analysis on
-should be listed. Primarily, \emph{peer-reviewed literature} shall be used.
-
-It is important to note that you have a page limit of 5-7 pages (excluding references) for your final report (which is due May 16, 2014), hence it is important to decide how much should be analyzed, discussed, and written for each section.
-
+-
 \section{Description of the System}
 \label{system}
 
@@ -232,12 +235,15 @@ active users, according to facebook newsroom which is giving facebook a revenue
 that supposedly will cover their expenses.
 
 \section{Summary}
-In the summary section you should summarize what your report is about and
-present your main findings/consequences. 
-
+-
 \section{Contribution Statement}
-In this section you state the role and contribution of each co-author. 
+Johan Nilsson - Quality Characteristics and Legal aspects.
 
+Christine Boghammar – Financial aspects.
+
+Axel Mårtensson - Availability for Disabled
+
+Kasper Bratz - Ethical aspects and Description of the System
 % references section
 \begin{thebibliography}{1}
 
@@ -266,21 +272,21 @@ International Journal of Liability and Scientific Enquiry(IJLSE), Vol. 4, No.
 \bibitem{hensley2012}
 Jason Hensley, 2012, “Facebook success shows why Intellectual Property laws are
 stifling”,6/2 - 2012,
-http://www.policymic.com/articles/3939/facebook-success-shows-why-intellectual-property-laws-are-stifling
+\href{http://www.policymic.com/articles/3939/facebook-success-shows-why-intellectual-property-laws-are-stifling}{http://www.policymic.com/articles/3939/facebook-success-shows-why-intellectual-property-laws-are-stifling}
 
 \bibitem{brodkin2012}
 Jon Brodkin,  2012, “Yahoo IP lawsuit: We patented “Facebook’s entire social
 network model”, 13/3 - 2012,
-http://arstechnica.com/tech-policy/2012/03/yahoo-patent-lawsuit-we-invented-facebooks-entire-social-network-model/
+\href{http://arstechnica.com/tech-policy/2012/03/yahoo-patent-lawsuit-we-invented-facebooks-entire-social-network-model/}{http://arstechnica.com/tech-policy/2012/03/yahoo-patent-lawsuit-we-invented-facebooks-entire-social-network-model/}
 
 \bibitem{delamerced2012}
 Michael J.De La Merced, 2012, “Yahoo and Facebook settle patent lawsuits”, 6/6
 – 2012,
-http://dealbook.nytimes.com/2012/07/06/yahoo-and-facebook-said-to-settle-patent-lawsuits/?_php=true&_type=blogs&_php=true&_type=blogs&_r=1
+\href{http://dealbook.nytimes.com/2012/07/06/yahoo-and-facebook-said-to-settle-patent-lawsuits/?_php=true&_type=blogs&_php=true&_type=blogs&_r=1}{http://dealbook.nytimes.com/2012/07/06/yahoo-and-facebook-said-to-settle-patent-lawsuits/?_php=true&_type=blogs&_php=true&_type=blogs&_r=1}
 
 \bibitem{epo2013}
 European Patent Office, 2013, “Patents for software? European law and
-practice”, 26/11 – 2013, http://www.epo.org/news-issues/issues/software.html
+practice”, 26/11 – 2013, \href{http://www.epo.org/news-issues/issues/software.html}{http://www.epo.org/news-issues/issues/software.html}
 
 \bibitem{facebookrights2013}
 Facebook, - , “Statement of Rights and Responsibilities”, 15/11 - 2013
@@ -296,30 +302,30 @@ Management, Faculty of Economic and Business, and University of Brawijaya 1
 
 \bibitem{chiayi}
 Graduate Institute of Marketing and Logistics, National Chiayi University,
-http://www.idosi.org/wasj/wasj28(efmo)13/15.pdf (Peer Reviewed)
+\href{http://www.idosi.org/wasj/wasj28(efmo)13/15.pdf}{http://www.idosi.org/wasj/wasj28(efmo)13/15.pdf }
 
 \bibitem{paul}
 Thomas Paul, Daniel Puscher, and Thorsten Strufe, “Improving the Usability of
-Privacy settings in Facebook”, http://arxiv.org/abs/1109.6046 (Peer Reviewed)
+Privacy settings in Facebook”, \href{http://arxiv.org/abs/1109.6046}{http://arxiv.org/abs/1109.6046 }
 
 \bibitem{kumparak2013}
 Greg Kumparak, 2013, “Security Researcher Hacks Mark Zuckerberg’s Wall To Prove
 His Exploit Works”, 18/8 - 2013,
-http://techcrunch.com/2013/08/18/security-researcher-hacks-mark-zuckerbergs-wall-to-prove-his-exploit-works/
+\href{http://techcrunch.com/2013/08/18/security-researcher-hacks-mark-zuckerbergs-wall-to-prove-his-exploit-works/}{http://techcrunch.com/2013/08/18/security-researcher-hacks-mark-zuckerbergs-wall-to-prove-his-exploit-works/}
 
 \bibitem{priestley2011}
 *Is this a valid source?*Evan Priestley, 2011, “Is it true that facebook has no
 testers”, 20/12 – 2011,
-http://www.quora.com/Is-it-true-that-Facebook-has-no-testers
+\href{http://www.quora.com/Is-it-true-that-Facebook-has-no-testers}{http://www.quora.com/Is-it-true-that-Facebook-has-no-testers}
 
 \bibitem{priestley2011b}
 *Is this a valid source?*Evan Priestley, 2011, “Why does Facebook not need to
 produce particulary high-quality code?”, 20/12 – 2011,
-http://www.quora.com/Facebook-Engineering/Why-does-Facebook-not-need-to-produce-particularly-high-quality-software
+\href{http://www.quora.com/Facebook-Engineering/Why-does-Facebook-not-need-to-produce-particularly-high-quality-software}{http://www.quora.com/Facebook-Engineering/Why-does-Facebook-not-need-to-produce-particularly-high-quality-software}
 
 \bibitem{innovation}
 (?)Buisness Model Innovation Matters,
-http://bmimatters.com/2012/01/08/understanding-business-model-fundamentals/
+\href{http://bmimatters.com/2012/01/08/understanding-business-model-fundamentals/}{http://bmimatters.com/2012/01/08/understanding-business-model-fundamentals/}
 
 \bibitem{weiner2010}
 Nico Weiner, 2010 , “Social networks evolving into service platforms - the
@@ -328,7 +334,7 @@ Nico Weiner, 2010 , “Social networks evolving into service platforms - the
 Facebook-case from a business model viewpoint”, 40th Jahrestagung der
 Gesellschaft fur Informatik e.V. (GI): Service Science - Neue Perspektiven fur
 die Informatik, INFORMATIK 2010, Leipzig, Germany, September 27, 2010 - October
-1, 2010, http://subs.emis.de/LNI/Proceedings/Proceedings175/527.pdf
+1, 2010, \href{http://subs.emis.de/LNI/Proceedings/Proceedings175/527.pdf}{http://subs.emis.de/LNI/Proceedings/Proceedings175/527.pdf}
 
 \bibitem{weiner2011}
 Nico Weiner, 2011, “A Business Model Framework for the Design and Evaluation of
@@ -337,16 +343,16 @@ Business Models in
 \bibitem{srii}
 the Internet of Services ”, Annual SRII Global Conference, Stuttgart, Germany,
 -,
-http://ieeexplore.ieee.org.ludwig.lub.lu.se/stamp/stamp.jsp?tp=&arnumber=5958069&tag=1
+\href{http://ieeexplore.ieee.org.ludwig.lub.lu.se/stamp/stamp.jsp?tp=&arnumber=5958069&tag=1}{http://ieeexplore.ieee.org.ludwig.lub.lu.se/stamp/stamp.jsp?tp=&arnumber=5958069&tag=1}
 
 \bibitem{hof2011}
 Robert D. Hof, 2011, “You are the ad”, 1099-274X, -,
-http://eds.a.ebscohost.com.ludwig.lub.lu.se/eds/detail?sid=61403bdf-588f-4bf7-be69-d67225c27c5b%40sessionmgr4001&vid=3&hid=4208&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#db=bth&AN=61481061
+\href{http://eds.a.ebscohost.com.ludwig.lub.lu.se/eds/detail?sid=61403bdf-588f-4bf7-be69-d67225c27c5b%40sessionmgr4001&vid=3&hid=4208&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#db=bth&AN=61481061}{http://eds.a.ebscohost.com.ludwig.lub.lu.se/eds/detail?sid=61403bdf-588f-4bf7-be69-d67225c27c5b%40sessionmgr4001&vid=3&hid=4208&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#db=bth&AN=61481061}
 
 \bibitem{ortutay2014}
 Barbara Ortutay, 2014, “Facebook: Born in a dorm room, the site that had no
 business plan turns 10 today and is worth \$150 billion”, 4/2 – 2014
-,http://www.vancouversun.com/touch/story.html?id=9468642
+,\href{http://www.vancouversun.com/touch/story.html?id=9468642}{http://www.vancouversun.com/touch/story.html?id=9468642}
 
 \bibitem{haigh2013}
 Michel M. Haigh, Pamela Brubaker, Erin Whiteside, (2013) "Facebook: examining
@@ -361,53 +367,53 @@ Research, Vienna, Austria (et. al)
 \bibitem{mourdoukoutas}
 Panos Mourdoukoutas, 2014, “What's wrong with Facebook's Business model and
 Innovation strategy?”, 23/2 - 2014,
-http://www.forbes.com/sites/panosmourdoukoutas/2014/02/23/whats-wrong-with-facebooks-business-model-and-innovation-strategy/
+\href{http://www.forbes.com/sites/panosmourdoukoutas/2014/02/23/whats-wrong-with-facebooks-business-model-and-innovation-strategy/}{http://www.forbes.com/sites/panosmourdoukoutas/2014/02/23/whats-wrong-with-facebooks-business-model-and-innovation-strategy/}
 
 \bibitem{dixon2012}
 Chris Dixon, 2012, “Facebook's business model”, 15/5 – 2012,
-http://www.cdixon.org/2012/05/15/facebooks-business-model/
+\href{http://www.cdixon.org/2012/05/15/facebooks-business-model/}{http://www.cdixon.org/2012/05/15/facebooks-business-model/}
 
 \bibitem{owyang2012}
 Jeremiah Owyang, 2012, “Facebook: A brilliant Business model”, 19/5 - 2012,
-http://www.web-strategist.com/blog/2012/05/19/facebook-a-brilliant-business-model/
+\href{http://www.web-strategist.com/blog/2012/05/19/facebook-a-brilliant-business-model/}{http://www.web-strategist.com/blog/2012/05/19/facebook-a-brilliant-business-model/}
 
 \bibitem{lyons2012}
 Dan Lyons, 2012, “Facebook has a Business model problem”, 14/11 - 2012,
-http://readwrite.com/2012/11/14/facebook-has-a-business-model-problem#awesm=~oAtfMXJb5FLH5V
+\href{http://readwrite.com/2012/11/14/facebook-has-a-business-model-problem#awesm=~oAtfMXJb5FLH5V}{http://readwrite.com/2012/11/14/facebook-has-a-business-model-problem#awesm=~oAtfMXJb5FLH5V}
 
 \bibitem{dekel2013}
 Elan Dekel, 2013, “Facebook pages are a bad investment for small
 businesses”,22/1 – 2013,
-http://www.forbes.com/sites/elandekel/2013/01/22/facebook-pages-are-a-bad-investment-for-small-businesses/
+\href{http://www.forbes.com/sites/elandekel/2013/01/22/facebook-pages-are-a-bad-investment-for-small-businesses/}{http://www.forbes.com/sites/elandekel/2013/01/22/facebook-pages-are-a-bad-investment-for-small-businesses/}
 
 \bibitem{facebookbusiness}
 Facebook, https://www.facebook.com/business/overview
 
 \bibitem{ariaprimer}
-http://www.w3.org/TR/wai-aria-primer/#problems (accessed 4/4 2014)
+    \href{http://www.w3.org/TR/wai-aria-primer/#problems}{http://www.w3.org/TR/wai-aria-primer/#problems }
 
 \bibitem{buzzi2010}
 Buzzi, M.C.; Buzzi, M.; Leporini, B.; Akhter, F., "Is Facebook really "open" to
 all?," Technology and Society (ISTAS), 2010 IEEE International Symposium on ,
 vol., no., pp.327,336, 7-9 June 2010
-URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5514621&isnumber=5514600
+URL: \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5514621&isnumber=5514600}{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5514621&isnumber=5514600}
 
 \bibitem{ariaspec}
-http://www.w3.org/TR/wai-aria/ (accessed 4/4 2014)
+    \href{http://www.w3.org/TR/wai-aria/}{http://www.w3.org/TR/wai-aria/ }
 
 \bibitem{hailpern2009}
 Joshua Hailpern, Loretta Guarino-Reid, Richard Boardman, and Srinivas Annam.
 2009. Web 2.0: blind to an accessible new world.  In <em>Proceedings of the
 18th international conference on World wide web</em> (WWW '09). ACM, New York,
 NY, USA,  821-830. DOI=10.1145/1526709.1526820
-http://doi.acm.org/10.1145/1526709.1526820
+\href{http://doi.acm.org/10.1145/1526709.1526820}{http://doi.acm.org/10.1145/1526709.1526820}
 
 \bibitem{petrie2004}
 Helen Petrie, Fraser Hamilton, and Neil King. 2004. Tension, what tension?:
 Website accessibility and visual design.  In <em>Proceedings of the 2004
 international cross-disciplinary workshop on Web accessibility (W4A)</em> (W4A
 '04). ACM, New York, NY, USA,  13-18. DOI=10.1145/990657.990660
-http://doi.acm.org/10.1145/990657.990660
+\href{http://doi.acm.org/10.1145/990657.990660}{http://doi.acm.org/10.1145/990657.990660}
 
 \bibitem{meiselwitz2009}
 Gabriele Meiselwitz and Jonathan Lazar. 2009. Accessibility of Registration
@@ -415,11 +421,11 @@ Mechanisms in Social Networking Sites.  In <em>Proceedings of the 3d
 International Conference on Online Communities and Social Computing: Held as
 Part of HCI International 2009</em> (OCSC '09), A. Ant Ozok and Panayiotis
 Zaphiris (Eds.). Springer-Verlag, Berlin, Heidelberg,  82-90.
-DOI=10.1007/978-3-642-02774-1_9 http://dx.doi.org/10.1007/978-3-642-02774-1_9
+DOI=10.1007/978-3-642-02774-1_9 \href{http://dx.doi.org/10.1007/978-3-642-02774-1_9}{http://dx.doi.org/10.1007/978-3-642-02774-1_9}
 
 \bibitem{jaws}
 Freedom Scientific. JAWS for Windows ® Screen Reading Software.
-http://www.freedomscientific.com/products/fs/jaws-product-page.asp (accessed
+\href{http://www.freedomscientific.com/products/fs/jaws-product-page.asp}{http://www.freedomscientific.com/products/fs/jaws-product-page.asp }
 4/4 2014)
 
 \end{thebibliography}
