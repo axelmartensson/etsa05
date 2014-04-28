@@ -98,11 +98,11 @@ dat12jn1@student.lu.se}}
 
 \begin{abstract}
 Facebook has over the last decade segmented itself as the leading social
-network on the internet.
-A service with the goal of bringing people all over the world together in an
-effortless way. This paper aims to summarize the social aspects of Facebook
-from a few of the aspects: user-friendliness, financial, ethical and legal. 
+network on the internet. This paper discusses the accessibility, ethical, legal
+and business aspects of facebook. 
+
 Method for the study, results and conclusions must be written. 
+
 \end{abstract}
 
 \section{Introduction}
@@ -149,35 +149,132 @@ Paul et.al).
 
 \section{Availability for Disabled}
 \label{availability}
-we’ve decided to focus mainly on people with impaired vision. This decision
-stems from the result of a user panel study conducted by Petrie et al.\ the
-blind panel group had the lowest success rate of all the disability groups
-represented in the study.  
+%:set fo=tqa
 
-Blind computer users use a piece of software called a screen reader. JAWS is
-one example for Windows that seems to be relatively well established. The
-purpose of the screen reader is to read the content on screen. The main
-challenge in this is to filter the relevant information from the irrelevant,
-something done automatically by a seeing user at a quick glance on the screen.
-The blind user is however completely dependent on the feedback provided by
-their screen reader for interacting with other software on the computer. Most
-desktop applications of relevance such as office packages like Microsoft Word
-come with support for screen reader. However with the advance of web 2.0
-technology more and more applications that used to be desktop-based are now
-provided by online services. The functionality provided by these websites is to
-a large extent powered by JavaScript which provides dynamic updates of the web
-page. It increases the performance of web pages by not making the browser
-reload the whole page when something changes. 
+% Why are we focusing on the blind?
+% What types of accessibility products exist for the blind?
+% Which problems are encountered by people accessing facebook with a screen reader today?
+% What can be done to improve accessibility of facebook when using a screen reader?
 
-The problem\cite{jung2004} is that dynamic sites are often dependent on
-elements that contain no semantic information, such as DIV-tags, these are then
-decorated by javascript to provide functionality. The main technology for
-adapting screen readers to dynamically generated content is the W3C’s WAI-ARIA
-standards. Without semantic information, how are the screen readers supposed to
-interpret a given DIV tag? This is where WAI-ARIA comes in. It defines an
-interface for providing semańtic information through the addition of more
-classes to the DOM.  this information is then parsed by the client and
-presented to the screen reader in a meaningful way.
+This section will focus on the availability of facebook for blind computer
+users. The decision to do this stems from the result of a study conducted by
+Petrie et al.\cite{petrie2004}. The study was performed using a user panel that
+evaluated the accessibility of 100 web pages.  The user panel was comprised of
+people with various disabilities affecting their access to the web, such as
+blindness and dyslexia. User panel members were told to evaluate 10 websites
+and perform two representative tasks on each of them. The blind panel group had
+the lowest success rate of all the disability groups represented in the study.
+Their success rate was 53\% compared to an average success rate of 82\%. 
+
+Blind computer users use a piece of software called a screen reader.
+JAWS\cite{jaws} is one example for Windows users. It has a navigation mode for
+browsing the web and an editing mode for filling out forms. The purpose of the
+screen reader is to read the text currently being displayed on the screen and
+then convey this information via speech synthesis to the computer user. Screen
+readers read a page of text by simply starting to read the page sequentially
+from left to right, top to bottom. The user then has to use this information to
+build a mental model of what is presently on the screen and how it is laid out.
+The blind user is of course completely dependent on the feedback provided by
+their screen reader for interacting with software on the computer. 
+
+Screen readers have not been able to keep up with the advance of web 2.0
+technology and sites like Facebook that makes heavy use of it. The
+functionality provided by these websites is to a large extent powered by
+JavaScript. Common obstacles for screen readers that arise from the use of
+Javacript are custom controls\cite{ariaprimer} that are built with DOM-elements
+that contain no semantic information, such as DIV-tags. These are then
+decorated by javascript to provide functionality.  However, without semantic
+information, how is the screen reader supposed to interpret a given DIV tag?  
+
+The W3C’s WAI-ARIA standard\cite{ariaspec} could be used to solve this
+problem\cite{ariaprimer}.  It defines an interface for providing semantic
+information through the addition of more classes to the DOM.  The standard is
+very new and it is referenced at least once in all the papers cited in this
+section of this paper. None of the papers provide any data on its use.
+Furthermore, the standard  is not implemented in JAWS. Its most relevant
+contribution for the sake of this discussion is that it introduces the notions
+of role and state for elements of the DOM.  Consider the case where an element
+looks like a link and/or behave like a link, it should then have the WAI-ARIA
+role `link' to enable screen readers to interpret it as such.  Hailpern et
+al\cite{hailpern2009}.  argue that to make custom control elements accessible
+to screen readers, they should have a keyboard listener, be added to the
+tabindex and have an appropriate WAI-ARIA role.
+
+JavaScript enables dynamic updates of web pages. This means that it increases
+the performance of web applications by not making the browser reload the whole
+web page when something changes but instead limiting the reload to a certain
+region of the page. Screen readers have not yet caught up with this shift from
+static web pages with only text links and a few images here and there to
+dynamic web content. They do not detect changes that happen dynamically to the
+content (i.e after a page has loaded)\cite{hailpern2009}. When an event occurs
+on Facebook, e.g a new friend request is recieved, the user is notified by a
+little red icon that appears on the friend button in the topmost navigation
+bar. This change is not detected by the screen reader\cite{buzzi2010} because
+it is made dynamically by a script.  The only time that an existing screen
+reader detects a change is when doing a page refresh. A side effect of doing a
+refresh is that the screen reader loses its current place on the page and the
+user has to re-read the whole page to get to where the change occurred. The
+consequence for the user is that his/her mental model of the web page gets
+disturbed and has to be constantly re-evaluated due to the lack of feedback.
+This can be a great source of frustration for the users according to
+Petrie\cite{petrie2004}.
+
+Support for dynamic updates can be achieved by a combination of two
+things\cite{hailpern2009}: First, developers must provide audio feedback on
+event, e.g a voice saying ''You've got a new friend request'' when someone
+sends you a friend request. Secondly, WAI-ARIA has a concept called ``Live
+region''\cite{ariaspec} that enables web developers to mark certain elements
+(e.g a table) as dynamically updating. This is meant to enable the screen
+reader to keep an eye out for changes happening dynamically in this region of
+the page.
+
+To provide a convenient way to access Facebook and other web 2.0 sites,
+Hailpern et al\cite{hailpern2009}.  propose an alternative screen reader use
+model with a reading mode and a control mode instead of the modes mentioned
+above. upon receiving a new private message on Facebook use control mode to
+navigate to the inbox and open the message, then use reading mode to read the
+message.  We argue that the main advantage of this design is the increased
+cohesion between common application design patterns such as
+Model-View-Controller and the use model of the screen reader, thereby making
+the screen reader more intuitive to use on a web 2.0 site. 
+
+Facebook is a large web site and there are different parts of it that are more
+or less accessible. A more nuanced impression of facebook's approach to
+accessibility is given in Meiselwitz' and Lazar's \cite{meiselwitz2009} study
+of the accessibility of Facebook's sign-up process. They conclude that the
+sign-up process is ``moderately inaccessible'' and that it only violates a
+single paragraph in Section 508 of the US Rehabilitation Act. While signing up
+may be easy, we nevertheless conclude from our review of the literature that
+Facebook still has a long way to go before it can be comfortably deemed
+accessible for blind computer users.
+
+
+% % Problems Dynamic content updates: Notifying the user of a change when
+% dynamically updating a web page. e.g a new friend request. Now: screen
+% readers can only detect that something has changed on page refresh.
+% Furthermore when user is not provided feedback by screen reader when
+% performing an action such as clicking a link.  This results in the user
+% having to painstakingly re-read the whole page to discover the change.
+% 
+% Custom controls: decorated links, using divs for various stuff, javascript.
+% 
+% Managing focus: what is important on this page?
+% 
+% % Solutions
+% 
+% Dynamic content updates: Live Regions. Developers provide audio feedback on
+% event, e.g a voice saying ''You've got a new friend request'' when someone
+% sends you a friend request.  
+% 
+% Custom controls: should have keyboard listener and be added to the tabindex. If
+% it looks like a link and behaves like a link, it should have the ARIA role
+% `link'.\cite{hailpern2009}
+% 
+% Alternative User workflow model.  use a reading mode for traditional web
+% browsing and a control mode for interacting with the application instead of
+% navigation mode and forms mode\cite{hailpern2009}. e.g upon receiving a new
+% private message on Facebook use control mode to locate and open the message,
+% then use reading mode to read the message.
 
 \section{Ethical Aspects}
 \label{ethics}
@@ -236,13 +333,17 @@ that supposedly will cover their expenses.
 \section{Summary}
 -
 \section{Contribution Statement}
-Johan Nilsson - Quality Characteristics and Legal aspects.
+Johan Nilsson - Quality Characteristics, Legal aspects.
 
-Christine Boghammar – Financial aspects.
+Christine Boghammar – Business aspects.
 
 Axel Mårtensson - Availability for Disabled
 
-Kasper Bratz - Ethical aspects and Description of the System
+Kasper Bratz - Ethical aspects, Description of the System
+
+Abstract
+Introduction
+Summary
 % references section
 \begin{thebibliography}{1}
 
