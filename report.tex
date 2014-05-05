@@ -158,13 +158,15 @@ Paul et.al).
 
 This section will focus on the availability of facebook for blind computer
 users. The decision to do this stems from the result of a study conducted by
-Petrie et al.\cite{petrie2004}. The study was performed using a user panel that
+Petrie et al.\cite{petrie2004}. It was performed using a user panel that
 evaluated the accessibility of 100 web pages.  The user panel was comprised of
 people with various disabilities affecting their access to the web, such as
 blindness and dyslexia. User panel members were told to evaluate 10 websites
 and perform two representative tasks on each of them. The blind panel group had
 the lowest success rate of all the disability groups represented in the study.
-Their success rate was 53\% compared to an average success rate of 82\%. 
+Their success rate was 53\% compared to an average success rate of 82\%.  This
+result motivates further discussion of the tools available to a blind computer
+user when browsing on the internet.
 
 Blind computer users use a piece of software called a screen reader.
 JAWS\cite{jaws} is one example for Windows users. It has a navigation mode for
@@ -178,9 +180,9 @@ The blind user is of course completely dependent on the feedback provided by
 their screen reader for interacting with software on the computer. 
 
 Screen readers have not been able to keep up with the advance of web 2.0
-technology and sites like Facebook that makes heavy use of it. The
-functionality provided by these websites is to a large extent powered by
-JavaScript. Common obstacles for screen readers that arise from the use of
+technology and sites like Facebook that makes heavy use of such technology. The
+front-end provided by these websites is to a large extent powered by
+JavaScript.  Common obstacles for screen readers that arise from the use of
 Javacript are custom controls\cite{ariaprimer} that are built with DOM-elements
 that contain no semantic information, such as DIV-tags. These are then
 decorated by javascript to provide functionality.  However, without semantic
@@ -190,34 +192,32 @@ The W3C’s WAI-ARIA standard\cite{ariaspec} could be used to solve this
 problem\cite{ariaprimer}.  It defines an interface for providing semantic
 information through the addition of more classes to the DOM.  The standard is
 very new and it is referenced at least once in all the papers cited in this
-section of this paper. None of the papers provide any data on its use.
-Furthermore, the standard  is not implemented in JAWS. Its most relevant
-contribution for the sake of this discussion is that it introduces the notions
-of role and state for elements of the DOM.  Consider the case where an element
-looks like a link and/or behave like a link, it should then have the WAI-ARIA
-role `link' to enable screen readers to interpret it as such.  Hailpern et
-al\cite{hailpern2009}.  argue that to make custom control elements accessible
-to screen readers, they should have a keyboard listener, be added to the
-tabindex and have an appropriate WAI-ARIA role.
+section. It is important to note that none of them provide any data on its use.
+Furthermore, the standard  is not implemented in JAWS\cite{hailpern2009}.  Its
+most relevant contribution for the sake of this discussion is that it
+introduces the notions of role and state for elements of the DOM.  Consider the
+case where an element looks like a link and/or behaves like a link, it should
+then be given the WAI-ARIA role `link' to enable screen readers to interpret it
+as such.  Hailpern et al\cite{hailpern2009}.  suggest that to make custom control
+elements accessible to screen readers, they should have a keyboard listener, be
+added to the tabindex and have an appropriate WAI-ARIA role.
 
-JavaScript enables dynamic updates of web pages. This means that it increases
-the performance of web applications by not making the browser reload the whole
-web page when something changes but instead limiting the reload to a certain
-region of the page. Screen readers have not yet caught up with this shift from
-static web pages with only text links and a few images here and there to
-dynamic web content. They do not detect changes that happen dynamically to the
-content (i.e after a page has loaded)\cite{hailpern2009}. When an event occurs
-on Facebook, e.g a new friend request is recieved, the user is notified by a
-little red icon that appears on the friend button in the topmost navigation
-bar. This change is not detected by the screen reader\cite{buzzi2010} because
-it is made dynamically by a script.  The only time that an existing screen
-reader detects a change is when doing a page refresh. A side effect of doing a
-refresh is that the screen reader loses its current place on the page and the
-user has to re-read the whole page to get to where the change occurred. The
-consequence for the user is that his/her mental model of the web page gets
-disturbed and has to be constantly re-evaluated due to the lack of feedback.
-This can be a great source of frustration for the users according to
-Petrie\cite{petrie2004}.
+Another feature of JavaScript is that it  enables dynamic updates of web pages.
+This means that it increases the performance of web applications by not making
+the browser reload the whole web page when something changes but instead
+limiting the reload to a certain region of the page. Screen readers have not
+yet caught up with this shift from static web pages with only text links and a
+few images here and there to dynamic web content. They do not detect changes
+that happen dynamically to the content (i.e after a page has
+loaded)\cite{hailpern2009}.  When an event occurs on Facebook, e.g a new friend
+request is recieved, the user is notified by a little red icon that appears on
+the corresponding button in the topmost navigation bar.  This change is not
+detected by the screen reader\cite{buzzi2010} because it is made dynamically by
+a script.  The only time that an existing screen reader detects a change is
+when doing a page refresh. A side effect of doing a refresh is that the screen
+reader loses its current place on the page and then the user has to re-read the
+whole page to get to where the change occurred. This can be a great source of
+frustration for the user.\cite{petrie2004} 
 
 Support for dynamic updates can be achieved by a combination of two
 things\cite{hailpern2009}: First, developers must provide audio feedback on
@@ -231,22 +231,28 @@ the page.
 To provide a convenient way to access Facebook and other web 2.0 sites,
 Hailpern et al\cite{hailpern2009}.  propose an alternative screen reader use
 model with a reading mode and a control mode instead of the modes mentioned
-above. upon receiving a new private message on Facebook use control mode to
-navigate to the inbox and open the message, then use reading mode to read the
-message.  We argue that the main advantage of this design is the increased
-cohesion between common application design patterns such as
-Model-View-Controller and the use model of the screen reader, thereby making
-the screen reader more intuitive to use on a web 2.0 site. 
+above. The workflow of this use model is best illustrated by an example: When
+receiving a new private message on Facebook use control mode to navigate to the
+inbox and open the message, then use reading mode to read the message.  We
+argue that the main advantage of this use model is the increased cohesion
+between common application design patterns such as Model-View-Controller and
+the use model of the screen reader, thereby making the screen reader more
+intuitive to use on a web 2.0 site. It is important to keep in mind that
+Facebook is a large website and it has different parts of it that are more or
+less intuitive and accessible.
 
-Facebook is a large web site and there are different parts of it that are more
-or less accessible. A more nuanced impression of facebook's approach to
-accessibility is given in Meiselwitz' and Lazar's \cite{meiselwitz2009} study
-of the accessibility of Facebook's sign-up process. They conclude that the
-sign-up process is ``moderately inaccessible'' and that it only violates a
-single paragraph in Section 508 of the US Rehabilitation Act. While signing up
-may be easy, we nevertheless conclude from our review of the literature that
-Facebook still has a long way to go before it can be comfortably deemed
-accessible for blind computer users.
+A more nuanced impression of facebook's accessibility is given in Meiselwitz'
+and Lazar's \cite{meiselwitz2009} study of the accessibility of Facebook's
+sign-up process. They conclude that the sign-up process is ``moderately
+inaccessible'' and that it only violates a single paragraph in Section 508 of
+the US Rehabilitation Act, \emph{which} paragraph is not mentioned. This study
+was conducted using only automated testing tools which is why we regard these
+results with a certain scepticism because they fail to encompass the user's
+experience of navigating the site, unlike \cite{buzzi2010}.
+
+We conclude from our review of the literature that Facebook still has a long
+way to go before it can be comfortably deemed accessible for blind computer
+users.
 
 
 % % Problems Dynamic content updates: Notifying the user of a change when
