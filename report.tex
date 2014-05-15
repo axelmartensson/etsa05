@@ -1,4 +1,3 @@
-
 %% report_template.tex
 %% V1.0
 %% 2012-03-16
@@ -13,12 +12,12 @@
 %% http://www.cs.lth.se/per_runeson
 %% for current contact information.
 %%
-%% This is a template file contaning instructions and a skeleton outline 
-%% for the final report in the course ETSA05: Software Engineering 
-%% Process - Soft Issues, given by the Department of Computer Science at 
+%% This is a template file contaning instructions and a skeleton outline
+%% for the final report in the course ETSA05: Software Engineering
+%% Process - Soft Issues, given by the Department of Computer Science at
 %% Lund University, Sweden.
-%% 
-%% This template requires IEEEtran.cls, written by Michael Shell, version 
+%%
+%% This template requires IEEEtran.cls, written by Michael Shell, version
 %% 1.7 or later.
 %%
 %% Support sites:
@@ -29,13 +28,13 @@
 %% Legal Notice:
 %% This code is offered as-is without any warranty either expressed or
 %% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% FITNESS FOR A PARTICULAR PURPOSE!
 %%
 %% User assumes all risk.
 %%
-%% In no event shall Lund University or any contributor to this code be 
-%% liable for any damages or losses, including, but not limited to, 
-%% incidental, consequential, or any other damages, resulting from the use 
+%% In no event shall Lund University or any contributor to this code be
+%% liable for any damages or losses, including, but not limited to,
+%% incidental, consequential, or any other damages, resulting from the use
 %% or misuse of any information contained here.
 %%
 %% All comments are the opinions of their respective authors and are not
@@ -48,7 +47,7 @@
 %% 2003/12/01 or later.
 %%
 %% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
+%% ** Modified files should be clearly indicated as such, including **
 %% ** renaming them and changing author support contact information. **
 %%
 %% File list of work: report_template.tex
@@ -99,16 +98,16 @@ dat12jn1@student.lu.se}}
 \begin{abstract}
 Facebook has over the last decade segmented itself as the leading social
 network on the internet. This paper analyzes the accessibility, ethical, legal
-and business aspects of facebook. 
+and business aspects of facebook.
 
-Method for the study, results and conclusions must be written. 
+Method for the study, results and conclusions must be written.
 
 \end{abstract}
 
 \section{Introduction}
 Facebook is a social networking platform created by Mark Zuckerberg in 2004.
 In this paper facebook is viewed as an ICT system, a perspective that enables
-the use of the ISO 9126 standard to identify the main quality characteristics of Facebook. 
+the use of the ISO 9126 standard to identify the main quality characteristics of Facebook.
 This analysis prompts a discussion of the sub-characteristics where Facebook is found
 lacking. One such characteristic of special interest is the accessibility for
 disabled people, especially the blind. The problems arising from the use of an
@@ -119,7 +118,7 @@ content is non-transparent. The ethical concerns, notably those related to the
 privacy of it's users and to the user generated content are identified and
 discussed. In contrast to this; When it comes to protecting the privacy of the
 company, they devote a lot of resources to searching the web for violations of
-their intellectual property.  Software code is hard to protect under current
+their intellectual property. Software code is hard to protect under current
 intellectual property laws, Facebook's strategy for doing so is examplified
 through two law suits and the ensuing discussion aims to provide a deeper
 understanding of how large software companies protect themselves against
@@ -130,7 +129,7 @@ dominant in the area of social network platforms is sought out. The conclusions
 from this discussion is used as a backdrop for analyzing how their progress
 derives from their business model. Based on a review of the relevant
 literature, this paper analyzes the accessibility, ethical, legal and business
-aspects of facebook. 
+aspects of facebook.
 
 \section{Description of the System}
 \label{system}
@@ -139,7 +138,7 @@ Originally Facebook was created as a way for Harvard students to connect, discus
 
 Today Facebook has approximately 1,3 billion monthly users and is translated to over 70 different languages.\cite{StatisticBrain} This has made Facebook the number one biggest social networking platform world wide. Even though all of this, Facebook is still growing exponentially. Just four years ago, Facebook had less than one third of the users it has today. If this trend continues and Facebook keeps expanding their system to more technology you will soon not be able to avoid it. Some concrete examples of this is that Facebook recently bought “Whatsapp” which is one of the largest communication apps available for mobile devices as well as Instagram which is the fastest growing social platform right now. \cite{KateKnibbs2014}
 Now for a technical point of view on the Facebook system. Facebook is a firm believer in open source and this is well reflected in their system. Ever since the earlier days of Facebook they have been using many of the biggest open source projects out there.
-Facebook’s servers run a  so called LAMP (Linux, Apache, MySQL, and PHP) stack with Memcache. Facebook’s web servers run Linux on Apaches HTTP servers. Linux for its customizability and security, and Apache because its one of the most popular open source web servers today. MySQL is used for its reliability and PHP for being a well rounded web development language with good support and an active community. Facebook has however stated that the use of PHP might have been a mistake on their part since it is not optimized for very large websites. Which in Facebook’s case makes scaling a large problem.
+Facebook’s servers run a so called LAMP (Linux, Apache, MySQL, and PHP) stack with Memcache. Facebook’s web servers run Linux on Apaches HTTP servers. Linux for its customizability and security, and Apache because its one of the most popular open source web servers today. MySQL is used for its reliability and PHP for being a well rounded web development language with good support and an active community. Facebook has however stated that the use of PHP might have been a mistake on their part since it is not optimized for very large websites. Which in Facebook’s case makes scaling a large problem.
 Memcache is a memory caching system which helps Facebook to run in an optimized way.
 \cite{SteveKampbel2010}
 While using all of these large open source softwares Facebook also makes it a point to give back to the community. Most of Facebook’s projects are public and are available on yet another open sourced service called github. Here everyone have access to the source code and are allowed to commit improvements. Some of the largest contributions by Facebook to the open source community is a system called phpsh which is a IDE for PHP development. This system was created in-house by Facebook and its the tool they use when developing PHP. They decided to make this public to help PHP developers around the world. \cite{SteveGrimm2006}
@@ -155,25 +154,25 @@ The {\bf Facebook chat} where users can communicate privately with each other. A
 
 {\bf Facebook calendar} where users can create private or open events complete with reminders, maps to the location and description of the event.
 
-{\bf Facebook applications} Independant developers are allowed to create application that can be run in the Facebook user interface. These apps can range anywhere from games to interfaces to other websites. Today approximately 7 million apps are available on the  Facebook's app center.\cite{StatisticBrain}
+{\bf Facebook applications} Independant developers are allowed to create application that can be run in the Facebook user interface. These apps can range anywhere from games to interfaces to other websites. Today approximately 7 million apps are available on the Facebook's app center.\cite{StatisticBrain}
 
 \section{Quality Characteristics}
 \label{quality}
 
-As our society grows increasingly digitalized we are turning more and more towards socialize and staying in contact through the internet. From this change Facebook has seen a steady rise of users\cite{foster} and currently has 757 million daily users\cite{smith2014}. With this broad array of users it begs the question as to why people are attracted to Facebook. By following ISO 9126 standards we’ve narrowed down the prioritized characteristics for Facebook to be: usability, functionality and portability. 
+As our society grows increasingly digitalized we are turning more and more towards socialize and staying in contact through the internet. From this change Facebook has seen a steady rise of users\cite{foster} and currently has 757 million daily users\cite{smith2014}. With this broad array of users it begs the question as to why people are attracted to Facebook. By following ISO 9126 standards we’ve narrowed down the prioritized characteristics for Facebook to be: usability, functionality and portability.
 
 Being the leading social networking platform Facebook has a spectrum of users ranging from children to elderly. Older adults that might have problems apprehending the digital world in the way that the younger generation does have turned to social media to stay in touch with family and friends. A telling fact is that in 2010 a study showed that social media usage of people 50 years or older doubled in a year\cite{madden2010}. To facilitate this wide range of users with varying internet experience Facebook has to make their service as user-friendly as possible to achieve greater user satisfaction\cite{rauniar2012}. Prioritizing down to sub-characteristics, the main characteristics within usability are the learnability and operability. By providing guides when changing the user interface Facebook further proves this to be the case by making sure that their users are able to effortlessly use their system in a minimal amount of time.
 The learnability of facebook also directly links to how useful people find it to be and improves the overall user satisfaction\cite{choi2014}.
 
-One place where Facebook falls short in the usability department is in the understandability aspect. While it’s a system that is fairly easy to understand, most people have trouble comprehending who sees what. These limitations on how comments or posts are shared to the public often lead to confusion as the default privacy settings of Facebook expose large parts of the users profile\cite{paul2011}. To prevent abuse of personal information users are thereby forced to change their privacy settings themselves, which might prove difficult to the inexperienced user.             
-Functionality being one of the major focus points for Facebook stems from wanting to keep users entertained and using Facebook for more reasons than to socialize. With an increasing number of reasons to visit the site facebook not only performs the tasks that the user might require, it also adds new functionality with the aim of widening its use. By introducing games into facebook the company has branched towards this end, and with one fourth of users playing Facebook games it has had a noticeable effect on how people use Facebook\cite{constine2012}. Facebook also puts a lot of time into being interoperable with other sites on the internet. Finding use in various areas such as login verification on SoundCloud and the ability to hyperlink from blogs gives facebook a larger amount of  traffic. One of the areas within functionality where Facebook is lacking is in the security sub-characteristics. An example of where Facebook’s security failed is the case of where an independent security researcher used an exploit to post on Mark Zuckerberg’s friends-only wall to prove that the bug needed fixing\cite{kumparak2013}.          
+One place where Facebook falls short in the usability department is in the understandability aspect. While it’s a system that is fairly easy to understand, most people have trouble comprehending who sees what. These limitations on how comments or posts are shared to the public often lead to confusion as the default privacy settings of Facebook expose large parts of the users profile\cite{paul2011}. To prevent abuse of personal information users are thereby forced to change their privacy settings themselves, which might prove difficult to the inexperienced user.
+Functionality being one of the major focus points for Facebook stems from wanting to keep users entertained and using Facebook for more reasons than to socialize. With an increasing number of reasons to visit the site facebook not only performs the tasks that the user might require, it also adds new functionality with the aim of widening its use. By introducing games into facebook the company has branched towards this end, and with one fourth of users playing Facebook games it has had a noticeable effect on how people use Facebook\cite{constine2012}. Facebook also puts a lot of time into being interoperable with other sites on the internet. Finding use in various areas such as login verification on SoundCloud and the ability to hyperlink from blogs gives facebook a larger amount of traffic. One of the areas within functionality where Facebook is lacking is in the security sub-characteristics. An example of where Facebook’s security failed is the case of where an independent security researcher used an exploit to post on Mark Zuckerberg’s friends-only wall to prove that the bug needed fixing\cite{kumparak2013}.
  
- When facebook started out it was a pc specific application, but as smartphones became popular it brought with it the ability to have Facebook constantly available. In line with their focus on keeping users active on facebook a natural step was to adapt to the smartphone environment in order to make Facebook more accessible. By having a focus on the sub-characteristics adaptability and co-existence facebook is able to bridge the distance between people, and allows them to stay in contact at all times. 
+ When facebook started out it was a pc specific application, but as smartphones became popular it brought with it the ability to have Facebook constantly available. In line with their focus on keeping users active on facebook a natural step was to adapt to the smartphone environment in order to make Facebook more accessible. By having a focus on the sub-characteristics adaptability and co-existence facebook is able to bridge the distance between people, and allows them to stay in contact at all times.
  
- While keeping high standard related to their prioritized characteristics, facebook is somewhat lacking in other characteristics such as reliability and maintainability. 
-This is understandable to a degree since social media doesn’t handle critical computation or information and since facebook is so predominant in social media, people will continue using facebook despite the software having malfunctions. 
+ While keeping high standard related to their prioritized characteristics, facebook is somewhat lacking in other characteristics such as reliability and maintainability.
+This is understandable to a degree since social media doesn’t handle critical computation or information and since facebook is so predominant in social media, people will continue using facebook despite the software having malfunctions.
 
-We theorize that a consequence that follows from facebook not having to prioritize having their software working to a fault at all times is that they’re able to ship new functionality frequently without being overly concerned as to whether the new features are bug-free or not. Efficiency, the last characteristic to discuss, can be coupled both to the prioritized and non-prioritized characteristics in Facebook’s case. The time behaviour can have a crucial implication on how users perceive new functionality and on the other hand the resource Utilisation can be closely linked to the Reliability characteristic which doesn’t necessarily affect the user satisfaction to a large degree. 
+We theorize that a consequence that follows from facebook not having to prioritize having their software working to a fault at all times is that they’re able to ship new functionality frequently without being overly concerned as to whether the new features are bug-free or not. Efficiency, the last characteristic to discuss, can be coupled both to the prioritized and non-prioritized characteristics in Facebook’s case. The time behaviour can have a crucial implication on how users perceive new functionality and on the other hand the resource Utilisation can be closely linked to the Reliability characteristic which doesn’t necessarily affect the user satisfaction to a large degree.
 
 \section{Availability for Disabled}
 \label{availability}
@@ -200,14 +199,14 @@ To provide a convenient way to access Facebook and other web 2.0 sites, Hailpern
 
 A more nuanced impression of facebook's accessibility is given in Meiselwitz' and Lazar's \cite{meiselwitz2009} study of the accessibility of Facebook's sign-up process. They conclude that the sign-up process is ``moderately inaccessible'' and that it only violates a single paragraph in Section 508 of the US Rehabilitation Act, \emph{which} paragraph is not mentioned. This study was conducted using only automated testing tools which is why we regard these results with a certain scepticism because they fail to encompass the user's experience of navigating the site, unlike \cite{buzzi2010}.
 
-We conclude from our review of the literature that Facebook still has a long way to go before it can be comfortably deemed accessible for blind computer users. 
+We conclude from our review of the literature that Facebook still has a long way to go before it can be comfortably deemed accessible for blind computer users.
 
 \section{Ethical Aspects}
-\label{ethics} 
+\label{ethics}
 
-Privacy concerns: 
+Privacy concerns:
 So, what is Facebook allowed to do with with the copious amount of information stored about its users?
-Every user is able to change their individual privacy settings. The only information you can’t hide is your name, profile picture and your mutual friends. Other than that you can choose just what you want your profile to display and who should be able to see it\cite{JacobClifton2011}. 
+Every user is able to change their individual privacy settings. The only information you can’t hide is your name, profile picture and your mutual friends. Other than that you can choose just what you want your profile to display and who should be able to see it\cite{JacobClifton2011}.
 
 Facebook can use and sell all of the information you state on your profile any way they want, but they will do this by selling a data pile instead of directly linking your name to the information\cite{JacobClifton2011}. For example if a marketing company wants to know how many people likes their product Facebook will say that “X” amount of people like it instead of saying [Name] likes your product. By using this principle Facebook has found a way to sell your personal information without directly disregarding your privacy. Cause in the long run, who would really care if a company know that you like their product when your just a number in a grand total.
 
@@ -217,44 +216,69 @@ Sharing photos on Facebook:
 Facebook disclaimers state that when uploading a picture to Facebook they will get non-exclusive, transferable, sub-licensable, royalty-free, worldwide license \cite{LawOfficeDelsack}. This does contrary to popular beliefs not mean Facebook owns your picture, however this allows Facebook to sell and market your photos for free without having your consent. A common problem amongst people is that pictures are posted of a user by someone else and unless the picture in question is violating the terms of service nothing can be done to get the picture removed and Facebook can use the picture freely, you can however remove any connections of the picture and your account be removing any “tags” from the photo, but the picture is still there. This can be debated as morally wrong since indecent pictures of you on the internet can be found by anyone, like a future employer.
 
 What can you post on Facebook:
-With Facebook allowing its users the amount of free speech it does, controversies are bound to occur. Facebook has set a few ground rules stating what is acceptable to publish. According to these standards, here are some of the major things that is not allowed to post\cite{FCS}: 
+With Facebook allowing its users the amount of free speech it does, controversies are bound to occur. Facebook has set a few ground rules stating what is acceptable to publish. According to these standards, here are some of the major things that is not allowed to post\cite{FCS}:
 
 \begin{itemize}
   \item Nudity or other sexually suggestive content.
   \item Hate speech, credible threats or direct attacks on an individual or group.
   \item Content that contains self-harm or excessive violence.
-  \item Spam. 
+  \item Spam.
 \end{itemize}
 
 
-Repeatedly violating these guidelines will, depending on the severity of the infringement, result in the user receiving a warning or even getting banned. 
+Repeatedly violating these guidelines will, depending on the severity of the infringement, result in the user receiving a warning or even getting banned.
 
 Even though Facebook clearly states what is allowed to post, several controversies has risen over the years. One of them concerns extreme violence and breastfeeding.
-In the early 2013’s both breastfeeding pictures/movies were banned from Facebook. Breastfeeding pictures because it was believed that this violated the nudity and sexual content paragraph of the community standards, and the extreme violence because it featured extreme violence. The fact that breastfeeding pictures were banned caused quite some complaints with the community saying this was a natural thing and not something sexual. Facebook stood their ground and breastfeeding pictures are still banned today since it is still believed to violate the nudity paragraph. However Facebook for a period of time during the late 2013’s decided to allow videos depicting extreme violence such as beheadings so that people could condemn these acts. These kind of videos came with a warning that the video contained violent content, however they were still available for everyone, including children. This decision was heavily criticised and Facebook eventually changed their policy back to prohibit these kinds of videos. 
+In the early 2013’s both breastfeeding pictures/movies were banned from Facebook. Breastfeeding pictures because it was believed that this violated the nudity and sexual content paragraph of the community standards, and the extreme violence because it featured extreme violence. The fact that breastfeeding pictures were banned caused quite some complaints with the community saying this was a natural thing and not something sexual. Facebook stood their ground and breastfeeding pictures are still banned today since it is still believed to violate the nudity paragraph. However Facebook for a period of time during the late 2013’s decided to allow videos depicting extreme violence such as beheadings so that people could condemn these acts. These kind of videos came with a warning that the video contained violent content, however they were still available for everyone, including children. This decision was heavily criticised and Facebook eventually changed their policy back to prohibit these kinds of videos.
 This is an example of Facebook banning a thing most people thinking should be allowed while banning something most of the community agrees should be banned. Since Facebook has approximately 1,3 billion monthly user they have a huge impact on what people, especially young people or children watch and should thereafter make sure that absolutely no violence or other offensive content is available on their sites. Better to harsh than to gentle?\cite{WikiCriticism2014}
 
 
 \section{Legal Aspects}
 \label{legal}
-Social media has been around since long before Facebook’s breakthrough, but Facebook revolutionized the industry by integrating a lot more functionality in a simpler way compared to their competitors. Now, being the leading company in its field, Facebook has a large focus on searching the web for violations of their intellectual property\cite{nguyen2012}. This concern originates from the fact that software code, which Facebook is primarily build of, is very hard to protect within the frameworks of Intellectual Property laws. The IP laws were introduced in 1867\cite{wikiIntellect} to protect innovative ideas in the form of the following rights: Copyright, industrial design rights, trademarks, trade dress and trade secrets. These rights have since evolved, but as the software industry emerged, the laws have had a hard time adapting to the protection of software. The process of protecting software is complicated due to the fact that under current IP laws the protection of software can be viewed as a combination of the traits of copyrights, trade dress, patents and trade secrets\cite{nguyen2012}.  
+Social media has been around since long before Facebook’s breakthrough, but Facebook revolutionized the industry by integrating a lot more functionality in a simpler way compared to their competitors. Now, being the leading company in its field, Facebook has a large focus on searching the web for violations of their intellectual property\cite{nguyen2012}. This concern originates from the fact that software code, which Facebook is primarily build of, is very hard to protect within the frameworks of Intellectual Property laws. The IP laws were introduced in 1867\cite{wikiIntellect} to protect innovative ideas in the form of the following rights: Copyright, industrial design rights, trademarks, trade dress and trade secrets. These rights have since evolved, but as the software industry emerged, the laws have had a hard time adapting to the protection of software. The process of protecting software is complicated due to the fact that under current IP laws the protection of software can be viewed as a combination of the traits of copyrights, trade dress, patents and trade secrets\cite{nguyen2012}.
 So how can Facebook defend its software code if it isn’t covered under the IP laws? Facebook has a very recognizable image, The Facebook logo, the “like” button and the overall feel of the website all follow the same theme. So while Facebook has large problems defending its source code it can turn to trade dress rights to protect their software code. This is a technique which is used to a large extent in the software industry because of the fact that laws say that if a trade dress infringement action is successfully won it has the potential of an all-encompassing protection for the entire application\cite{king2000}. This was used by Facebook in its trade dress infringement action against german StudiVZ\cite{nguyen2012}, which was was filed in German and United States courts in 2008\cite{facevsstudi}. Facebook’s claim was that StudiVZ had copied the appearance of Facebook’s interface to such an extent that users could be deceived into thinking there was an affiliation between Facebook and StudiVZ. In US courts a settlement was made between the two parties with StudiVZ paying Facebook an undisclosed amount, and in german courts the ruling was that Facebook had no rightful claims and the case was rejected.
 The ideal way for Facebook to protect its source code would be through trade secrets to hide their software code from the public. And while this would indeed work it is negated by reverse-engineering. Reverse-engineering means that a person decompiles software and then works backwards to obtain the source code\cite{nguyen2012}. This is a process which almost always favours the person reversing the software in court\cite{reverse}, and also nullifies the protection of the trade secret since it is known to the public\cite{nguyen2012}. Facebook has chosen to guard itself against misuse of this by stating in their Statement of Rights and Purposes
-that: ”You will not modify, create derivative works of, decompile, or otherwise attempt to extract source code from us, unless you are expressly permitted to do so under an open source license, or we give you express written permission.”\cite{facebookrights2013}. This gives them the right in court against reverse-engineering that they are able to trace to their software, but it doesn’t stop their software code protected as a trade secret from being unveiled. However Facebook has use of trade secrets in other aspects such as flow charts, feature lists, protocol information and so on\cite{nguyen2012}. 
-The concept of Facebook being a social network platform is not an original thought, and has been seen before in other platforms such as MySpace. The internet giant Yahoo with more than 1000\cite{yahoopatent} registered patents filed a patent-based lawsuit against Facebook in 2012\cite{timothy2012}  concerning many of the ideas that made Facebook successful, such as the messaging system and their model of advertising. At the time Facebook owned just 21 patents, and chose to respond by acquiring 750 patents from IBM\cite{forbes2012}. These patents were then used in a counter-lawsuit against yahoo, which brought on a settlement. This settlement resulted in a shared licensing of both companies patents, which means that no further lawsuits between the companies will be filed over these patents. Overall this provides a deeper insight into how large software companies defend themselves against lawsuits concerning software.
+that: ”You will not modify, create derivative works of, decompile, or otherwise attempt to extract source code from us, unless you are expressly permitted to do so under an open source license, or we give you express written permission.”\cite{facebookrights2013}. This gives them the right in court against reverse-engineering that they are able to trace to their software, but it doesn’t stop their software code protected as a trade secret from being unveiled. However Facebook has use of trade secrets in other aspects such as flow charts, feature lists, protocol information and so on\cite{nguyen2012}.
+The concept of Facebook being a social network platform is not an original thought, and has been seen before in other platforms such as MySpace. The internet giant Yahoo with more than 1000\cite{yahoopatent} registered patents filed a patent-based lawsuit against Facebook in 2012\cite{timothy2012} concerning many of the ideas that made Facebook successful, such as the messaging system and their model of advertising. At the time Facebook owned just 21 patents, and chose to respond by acquiring 750 patents from IBM\cite{forbes2012}. These patents were then used in a counter-lawsuit against yahoo, which brought on a settlement. This settlement resulted in a shared licensing of both companies patents, which means that no further lawsuits between the companies will be filed over these patents. Overall this provides a deeper insight into how large software companies defend themselves against lawsuits concerning software.
 -
 \section{Business Aspects}
 \label{financial}
 
--
+This submission describes the success and progress of Facebook from a business point of view considering the fact of the company being the leader in social network platforms. Looking at its business model today it is often said that it is the most effective and mature design of a business core compared to other highly developed companies. The question “what makes Facebook so radically dominant in the area of social network platforms and how their progress derives from their business model? will be answered in this section. To give a broader understanding, an explanation will be given of the concept and meaning of having a model containing business aspects such as financial factors, targeted customers and company values.
 
-\section{Summary} 
+The concept of a business model:
+A business model purpose is to give an outline about the product/service that's being offered. The point is to think through, validate and analyse all different significant elements to make the business logic as presentable as possible to potential stakeholders. It is important to put a lot of effort into cost structure detailing revenue streams and profit margins since these are generally the key for possibilities for a company of moving forward and to develop even further\cite{wikibusiness}. In the end the model should give you the bigger picture and make it easy to understand how it all fits together\cite{BusinessFundamentals}. 
+     To pinpoint some key questions that are quite straight forward in a business model\cite{ForDummies}:
+Who are the target customers?
+How will it reach, acquire, and keep customers?
+How will it be defined and differentiate your offering?
+How will it generate revenue?
+    Considering a business model in an entrepreneurial setting it is used as described earlier as the core of a company but it can also be used as something to lean back on. For examples when managers inside companies are exploring possibilities of taking the current core of the business to further development and broadening the concept. Looking at the meaning and benefits of an organized and well defined business plan as it has been described it is now accounted for that it can be used as a mechanism for developers making extensive growth in firms and successful businesses.  
+
+Target customers and values of Facebook:
+Facebook has primary two target customers, private users and business users. Even though the factor of business users are growing each day the rate of private users are growing even more\cite{weiner2010}. The elusive social network platform is providing a broad range of space and an environment for the sector of private users since it was originally created for them it eventually became an attractive forum for companies to reach out to potential customers. Since users are already giving out their information and interests Facebook has all the tools needed to know where comercial should be placed to reach the meant target customers. Other companies who do not have this privilege has to use other resources to extract information about their target customers and therefore have to put more work and money into it. Obviously this is profitable for both parts being Facebook and advertisers. 
+The concept of the social network is as mentioned a platform to share, connect and reach out to friends and by that has taken on the mission to provide the perfect service so the information wished to be shared actually get to be seen by friends and intended regions. Facebook’s aim is to make a bridge between other channels of communication and information so users do not have to leave the page to get the desired information. The result of integrating with other platforms such as news sites, providing users with news while connecting with their daily friends and pages, has led the users to tend to use Facebook as a substitute to other news-portals. Another channel of information Facebook now has integrated with is Google which now has added Facebook pages updates to their real-time search\cite{Cutler2010}. Thereby making it easy to access relevant information  from searches made on google into Facebook and directing outside sites into their own. The consequences of this concept broadening is the factor of wide range of context is put into the virtual space concentrating it to Facebook creating a lock-in effect on the users. 
+    Additionally to bridging channels of information, primarily private users, Facebook has also further developed the platform in offering virtual games to the users. This way users tend to spend more time on the site and also hopefully reach out and to catch the attention of a new group of users.
+
+Facebook being a service platform:
+Facebook’s rapid growth have led it to be the biggest social network platform with 1.28 billions users. 1.23 billion use Facebook each month and 757 million of them are connected every day\cite{FBInfo}. Thinking of these statistics gives a perspective of how big the service platform is. Being a service platform you would think that the employes working for Facebook are the ones supplying with the service but since it is a platform providing the functionality of presenting the service the user needs but that is not the case. Considering all kinds of input has value, the amount of input and information that approximately 1,2 billion users feed to Facebook voluntarily is a great resource and value. Building a network where the users do all the work for them. Due of the great number of users there is no doubt that it is a popular platform for companies to advertise on. During the progress of the platform, companies and firms can now set up a page for the intention of commercial means and to be able to an up-to-date feed of information about what's going on with the company . This way the information is out there but the user can choose to look it up or other users can promote a page to its friends. The great invention of Facebook’s “Like button” gives the users the possibility to like a page and get notifications pushed to them as the pages writes updates as statuses or picture uploads. On the other hand since Facebook has the information of their users fed to them they can easily promote different pages to users likely to be interested in what the page is about. Statistics show that 64\% of US top 50 law firms have a Facebook page and 25 million number of small business have a page on Facebook. A total number of 7 million of apps and websites are integrated with Facebook which indicates the vast range Facebook comes through on the internet\cite{Smith2014}.  As this goes on Facebook keeps delivering functionality to their broad range of users and is frequently launching new features to the platform.
+
+Financial aspects:
+Up until two years ago Facebook did not publicly disclose its ﬁnancial
+results but on Friday the 18th of May 2012b the initial public offering(IPO) was held. Although the IPO almost closed at opening price at 100 billion dollar is still was one of the highest peak of capitalization in technology\cite{owyang2012}. The platform being Facebook reached a revenue in 2013 of an amount consisting 7.87 billion dollars. Its revenue increased by 55\% from the year 2012 to 2013. 
+Starting with Facebooks cost structure it consists mainly of four different cost areas; data center, marketing, administrative and research costs. As mentioned before Facebook has the privilege of the users doing most of the work for them, although a company so big should entail a grand number of employees. As of March 2014 Facebook had 6,818 employees and that is simply implying how agile the company infrastructure must be since so little resources is needed\cite{BusinessFundamentals}. Even so considering that marketing of the site is more or less done for them. Companies websites often refers to their pages and profiles on Facebook and employs their readers and interests to “like” their page so they will receive the information written there. The costs made on research differs from year to year but the constant line of improvements on further development has history speaking for itself when Facebook is taking over the area of Social network platforms and has done well on that part. 
+Moving on to the revenue streams as known it is free to join the social network, you could say that it is partly a stream of revenue reasoning the fact without users wanting to connect to Facebook there is no way to get earning out of it. When a user is entering Facebook it is originally to interact with its social means and not specifically intended to go to other sites. Considering google as an example on the counterpart. When a user enters googles search engine they already have a purchase intent and is wanting to look up products on other sites but using google as a starting point. Facebook users on the other hand is usually not in an intent of purchase but for every click on a displayed ad on Facebook generates revenue as the advertisers have to pay for marketing on the site. A negative effect is that ads reduce the users experience since having ads popping up while you are connected is not a desirable experience. So the importance here is to find a balance between advertising on the site and to make the experience as enjoyable as possible for the users. As mentioned in previous section Facebook has the tools to extract required information from users to be able to display ads to its intended target customers. Therefor not hurting the experience that much for the users and in some cases when ads is being directed in the right direction even might increase the satisfaction of the users. 
+Another way Facebook, being this huge service platform as it is, generate revenue is with the concept of offering a game platform for developers connecting Facebook users with the developers produced apps and games. The applications such as games have to be free to the users but the in-app-purchases however do not have to be and Facebook gets their share for every purchase made by a users. The platform is also offering the same experience on mobile platform and has now become one of the main platform for users where apps involving games is very popular. The statistics state that 59\% of Facebook revenue comes from mobile platforms and the number of in-game purchases made in 2012 was 27 million. The Amount of hours per month users spend on playing Facebook games is 927 million hours or approximately 106.000 years/month. With this concept of revenue stream and the numbers showing in the statics it is safe to say that it is profitable and desirable.
+
+
+\section{Summary}
 \label{summary}
-In conclusion this report aims to evaluate the concept of facebook in regards to several aspects. From a business point of view the business logic and model is often considered to be the most impressive one mainly because of three factors. Firstly the concept’s success stems from the fact that the users do all the work. Secondly, the company has an agile infrastructure with merely few costs and lastly Facebook has integrated other streams and channels of communication into their own. Despite Facebook’s usability being one of the key characteristics for facebook in attracting all kinds of target customers, the software has a long way to go concerning the accessibility needs for disabled. Regarding legal aspects Facebook has a hard time defending their software code for a number of reasons. The biggest reason is that current IP laws aren’t correctly adapted to the software industry, another reason is that reverse-engineering makes it difficult to hide software from competitors. 
-Finally, considering the huge amount of information that Facebook provides through their service it is not Facebook who is held accountable for many of the privacy concerns that a user may have regarding ethical questions. To summarize these aspects Facebook is a leader in the social media market for a variety of reasons, which have been discussed in this report. 
+In conclusion this report aims to evaluate the concept of facebook in regards to several aspects. From a business point of view the business logic and model is often considered to be the most impressive one mainly because of three factors. Firstly the concept’s success stems from the fact that the users do all the work. Secondly, the company has an agile infrastructure with merely few costs and lastly Facebook has integrated other streams and channels of communication into their own. Despite Facebook’s usability being one of the key characteristics for facebook in attracting all kinds of target customers, the software has a long way to go concerning the accessibility needs for disabled. Regarding legal aspects Facebook has a hard time defending their software code for a number of reasons. The biggest reason is that current IP laws aren’t correctly adapted to the software industry, another reason is that reverse-engineering makes it difficult to hide software from competitors.
+Finally, considering the huge amount of information that Facebook provides through their service it is not Facebook who is held accountable for many of the privacy concerns that a user may have regarding ethical questions. To summarize these aspects Facebook is a leader in the social media market for a variety of reasons, which have been discussed in this report.
 
 
-- 
-\section{Contribution Statement} 
+-
+\section{Contribution Statement}
 
 Johan Nilsson - Quality
 Characteristics, Legal aspects, Summary.
@@ -339,14 +363,14 @@ Mary Madden,
 Rauniar, Rupak., Rawski, Greg. and Johnson, Ben. "End-user Satisfaction for Social Media- the case of Facebook" Paper presented at the annual meeting of the 43rd Decision Sciences Institute Annual Meeting, San Francisco Marriot, San Francisco, CA, Nov 16, 2012. 2014-01-08 \href{http://citation.allacademic.com/meta/p584271\_index.html}{http://citation.allacademic.com/meta/p584271\_index.html}
 
 \bibitem{choi2014}
-SIBONA, C.; CHOI, J., 
+SIBONA, C.; CHOI, J.,
 "Factors Affecting End-User Satisfaction on Facebook"
 International AAAI Conference on Weblogs and Social Media, North America, may 2012.
 accessed 14 May. 2014.
 \href{http://www.aaai.org/ocs/index.php/ICWSM/ICWSM12/paper/view/4569}{http://www.aaai.org/ocs/index.php/ICWSM/ICWSM12/paper/view/4569}
 
 \bibitem{paul2011}
- Paul, T., Puscher, D., 
+ Paul, T., Puscher, D.,
 \& Strufe, T.\ 27 september 2011,
 "Improving the Usability of Privacy Settings in Facebook"
 \href{http://arxiv.org/abs/1109.6046}{http://arxiv.org/abs/1109.6046} (Peer Reviewed)
@@ -375,10 +399,10 @@ Chad King, Note, Abort, Retry, Fail: Protection for Software-Related Inventions 
 
 \bibitem{facevsstudy}
 (14/5 - 2014)
-\url{http://en.wikipedia.org/wiki/Facebook,\_Inc.\_v.\_StudiVZ\_Ltd.#Ruling}  
+\url{http://en.wikipedia.org/wiki/Facebook,\_Inc.\_v.\_StudiVZ\_Ltd.#Ruling}
 
 \bibitem{timothy2012}
-Timothy B. Lee,  2012, “Yahoo’s big patent war escalation: a lawsuit against Facebook”, 12/3 - 2012,
+Timothy B. Lee, 2012, “Yahoo’s big patent war escalation: a lawsuit against Facebook”, 12/3 - 2012,
 \url{http://arstechnica.com/tech-policy/2012/03/yahoos-big-patent-war-escalation-a-lawsuit-against-Facebook/}
 
 \bibitem{nguyen2012}
@@ -418,13 +442,24 @@ Jeremiah Owyang, 2012, “Facebook: A brilliant Business model”, 19/5 - 2012,
 \href{http://www.web-strategist.com/blog/2012/05/19/facebook-a-brilliant-business-model/}{http://www.web-strategist.com/blog/2012/05/19/facebook-a-brilliant-business-model/}
 
 \bibitem{wikibusiness}
-"Business model"
-14/5-2014
-\bibitem{}
-\bibitem{}
-\bibitem{}
-\bibitem{}
-\bibitem{}
+Wikipedia, the free encyclopedia,(Business model,) 13/5 - 2014, \href{en.wikipedia.org/wiki/Business\_model\#Definitions\_of\_business\_model}{en.wikipedia.org/wiki/Business\_model\#Definitions\_of\_business\_model}
+
+\bibitem{BusinessFundamentals}
+businessmodelinnovationmatters,
+2012(Understanding Facebook Business Model,) 13/5 - 2014, \href{http://bmimatters.com/2012/04/10/understanding-facebook-business-model/}{http://bmimatters.com/2012/04/10/understanding-facebook-business-model/}
+
+\bibitem{ForDummies}
+ForDummies a wiley brand,(Defining Your Business Model,) 13/5 - 2014, \href{http://www.dummies.com/how-to/content/defining-your-business-model.html}{http://www.dummies.com/how-to/content/defining-your-business-model.html}
+
+\bibitem{Cutler2010}
+Kim-Mai Cutler,
+2010(Google real-time search adds status updates from Facebook Pages,)14/5 - 2014,\href{http://venturebeat.com/2010/02/24/google-real-time-search-facebook-pages/}{http://venturebeat.com/2010/02/24/google-real-time-search-facebook-pages/}
+
+\bibitem{FBInfo}
+Facebook,(Info,) 14/5 - 2014, \href{http://newsroom.fb.com/company-info/}{http://newsroom.fb.com/company-info/}
+
+\bibitem{Smith2014}
+Craig Smith,2014(By the Numbers: 36 Amazing Facebook Adverticing statistics,) 14/5 - 2014,\href{http://expandedramblings.com/index.php/facebook-advertising-statistics/\#.U3SQN6yv7Fq}{http://expandedramblings.com/index.php/facebook-advertising-statistics/\#.U3SQN6yv7Fq}
 
 % e med?
 \bibitem{krombholz2012}
@@ -451,7 +486,7 @@ Facebook, https://www.facebook.com/business/overview
 \bibitem{ariaprimer}
 Lisa Pappas, SAS and STC
 Richard Schwerdtfeger, IBM
-Michael Cooper, W3C 
+Michael Cooper, W3C
 "An introduction to rich Internet application accessibility challenges and solutions"
 W3C Working Draft 16 September 2010
 \href{http://www.w3.org/TR/wai-aria-primer/\#problems}{http://www.w3.org/TR/wai-aria-primer/\#problems }
@@ -471,24 +506,24 @@ W3C Recommendation 20 March 2014
 
 \bibitem{hailpern2009}
 Joshua Hailpern, Loretta Guarino-Reid, Richard Boardman, and Srinivas Annam.
-2009. Web 2.0: blind to an accessible new world.  In <em>Proceedings of the
+2009. Web 2.0: blind to an accessible new world. In <em>Proceedings of the
 18th international conference on World wide web</em> (WWW '09). ACM, New York,
-NY, USA,  821-830. DOI=10.1145/1526709.1526820
+NY, USA, 821-830. DOI=10.1145/1526709.1526820
 \href{http://doi.acm.org/10.1145/1526709.1526820}{http://doi.acm.org/10.1145/1526709.1526820}
 
 \bibitem{petrie2004}
 Helen Petrie, Fraser Hamilton, and Neil King. 2004. Tension, what tension?:
-Website accessibility and visual design.  In <em>Proceedings of the 2004
+Website accessibility and visual design. In <em>Proceedings of the 2004
 international cross-disciplinary workshop on Web accessibility (W4A)</em> (W4A
-'04). ACM, New York, NY, USA,  13-18. DOI=10.1145/990657.990660
+'04). ACM, New York, NY, USA, 13-18. DOI=10.1145/990657.990660
 \href{http://doi.acm.org/10.1145/990657.990660}{http://doi.acm.org/10.1145/990657.990660}
 
 \bibitem{meiselwitz2009}
 Gabriele Meiselwitz and Jonathan Lazar. 2009. Accessibility of Registration
-Mechanisms in Social Networking Sites.  In <em>Proceedings of the 3d
+Mechanisms in Social Networking Sites. In <em>Proceedings of the 3d
 International Conference on Online Communities and Social Computing: Held as
 Part of HCI International 2009</em> (OCSC '09), A. Ant Ozok and Panayiotis
-Zaphiris (Eds.). Springer-Verlag, Berlin, Heidelberg,  82-90.
+Zaphiris (Eds.). Springer-Verlag, Berlin, Heidelberg, 82-90.
 DOI=10.1007/978-3-642-02774-1\_9 \href{http://dx.doi.org/10.1007/978-3-642-02774-1\_9}{http://dx.doi.org/10.1007/978-3-642-02774-1\_9}
 
 \bibitem{jaws}
@@ -499,4 +534,17 @@ Freedom Scientific. JAWS for Windows ® Screen Reading Software. 4/4 2014
 \end{thebibliography}
 
 \end{document}
+
+    Status
+    API
+    Training
+    Shop
+    Blog
+    About
+
+    © 2014 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Contact
 
